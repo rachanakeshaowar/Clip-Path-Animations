@@ -72,3 +72,80 @@
                     </div>
                 </div>
             </div>
+<!-- Continuous Animation Card -->
+            <div class="animation-card">
+                <div class="card-header">
+                    <h3>Continuous Morph</h3>
+                    <p>Infinite shape transformation</p>
+                </div>
+                <div class="continuous-container">
+                    <div class="continuous-shape" id="continuous-shape">
+                        <div class="shape-content">
+                            <span>∞</span>
+                        </div>
+                    </div>
+                    <button onclick="toggleContinuous()" id="continuous-btn">Pause</button>
+                </div>
+            </div>
+
+            <!-- Loading Animation Card -->
+            <div class="animation-card">
+                <div class="card-header">
+                    <h3>Loading Effects</h3>
+                    <p>Clip-path loading animations</p>
+                </div>
+                <div class="loading-container">
+                    <div class="loading-bar" id="loading-bar"></div>
+                    <div class="loading-circle" id="loading-circle"></div>
+                    <button onclick="triggerLoading()">Start Loading</button>
+                </div>
+            </div>
+
+            <!-- Text Reveal Card -->
+            <div class="animation-card">
+                <div class="card-header">
+                    <h3>Text Reveal</h3>
+                    <p>Animated text unveiling</p>
+                </div>
+                <div class="text-reveal-container">
+                    <div class="text-reveal" id="text-reveal">
+                        <span>AMAZING ANIMATIONS</span>
+                    </div>
+                    <button onclick="triggerTextReveal()">Reveal Text</button>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Technical Info -->
+        <section class="tech-info">
+            <h2>Technical Implementation</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>CSS Clip-Path</h4>
+                    <p>Advanced polygon, circle, and path-based clipping</p>
+                    <code>clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);</code>
+                </div>
+                <div class="tech-item">
+                    <h4>CSS Animations</h4>
+                    <p>Keyframe animations with custom timing functions</p>
+                    <code>animation: morphShape 3s infinite ease-in-out;</code>
+                </div>
+                <div class="tech-item">
+                    <h4>JavaScript Integration</h4>
+                    <p>Dynamic animation control and user interaction</p>
+                    <code>element.style.clipPath = 'circle(150% at 50% 50%)';</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Advanced Clip-Path Animations | Final Year Project</p>
+            <p>Built with HTML5, CSS3, and Vanilla JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
