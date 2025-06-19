@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Clip-Path Animations </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="main-title">Advanced Clip-Path Animations</h1>
+          
+            <p class="description">Showcasing modern CSS clip-path techniques with smooth animations</p>
+        </header>
+
+        <!-- Animation Showcase Grid -->
+        <main class="showcase-grid">
+            
+            <!-- Morphing Shapes Card -->
+            <div class="animation-card" id="morphing-card">
+                <div class="card-header">
+                    <h3>Morphing Shapes</h3>
+                    <p>Click to animate</p>
+                </div>
+                <div class="morphing-shape" id="morphing-shape">
+                    <div class="shape-content">
+                        <span>MORPH</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reveal Animation Card -->
+            <div class="animation-card">
+                <div class="card-header">
+                    <h3>Reveal Animations</h3>
+                    <p>Multiple reveal patterns</p>
+                </div>
+                <div class="reveal-container">
+                    <div class="reveal-box" id="reveal-box">
+                        <div class="reveal-content">Revealed!</div>
+                    </div>
+                    <div class="control-buttons">
+                        <button onclick="triggerReveal('left')">Left</button>
+                        <button onclick="triggerReveal('right')">Right</button>
+                        <button onclick="triggerReveal('circle')">Circle</button>
+                        <button onclick="triggerReveal('diamond')">Diamond</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Hover Card -->
+            <div class="animation-card">
+                <div class="card-header">
+                    <h3>Hover Effects</h3>
+                    <p>Interactive clip-path transformations</p>
+                </div>
+                <div class="hover-grid">
+                    <div class="hover-shape triangle-morph">
+                        <span>Triangle</span>
+                    </div>
+                    <div class="hover-shape hexagon-morph">
+                        <span>Hexagon</span>
+                    </div>
+                    <div class="hover-shape star-morph">
+                        <span>Star</span>
+                    </div>
+                    <div class="hover-shape wave-morph">
+                        <span>Wave</span>
+                    </div>
+                </div>
+            </div>
