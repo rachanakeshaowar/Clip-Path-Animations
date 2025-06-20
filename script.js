@@ -57,4 +57,36 @@ function initializeAnimations() {
     createParticleBackground();
 }
 
+// Reveal animation functions
+function triggerReveal(type) {
+    if (!revealBox) return;
+    
+    // Remove any existing animation classes
+    revealBox.className = 'reveal-box';
+    
+    // Force reflow
+    void revealBox.offsetWidth;
+    
+    // Add the appropriate animation class
+    switch(type) {
+        case 'left':
+            revealBox.classList.add('reveal-left');
+            break;
+        case 'right':
+            revealBox.classList.add('reveal-right');
+            break;
+        case 'circle':
+            revealBox.classList.add('reveal-circle');
+            break;
+        case 'diamond':
+            revealBox.classList.add('reveal-diamond');
+            break;
+    }
+    
+    // Remove animation class after completion
+    setTimeout(() => {
+        revealBox.className = 'reveal-box';
+    }, 1500);
+}
+
   }
