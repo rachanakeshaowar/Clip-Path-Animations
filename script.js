@@ -172,4 +172,24 @@ function createParticleBackground() {
         createParticle(particleContainer);
     }
 }
+function createParticle(container) {
+    const particle = document.createElement('div');
+    const size = Math.random() * 6 + 2;
+    const startX = Math.random() * window.innerWidth;
+    const duration = Math.random() * 20 + 10;
+    
+    particle.style.cssText = `
+        position: absolute;
+        width: ${size}px;
+        height: ${size}px;
+        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 100%);
+        border-radius: 50%;
+        top: 100vh;
+        left: ${startX}px;
+        animation: floatUp ${duration}s linear infinite;
+        clip-path: circle(50% at 50% 50%);
+    `;
+    
+    container.appendChild(particle);
+    
   }
