@@ -14,3 +14,21 @@ const textReveal = document.getElementById('text-reveal');
 document.addEventListener('DOMContentLoaded', function() {
     initializeAnimations();
 });
+
+// Initialize all animations
+function initializeAnimations() {
+    // Morphing shape click event
+    if (morphingShape) {
+        morphingShape.addEventListener('click', function() {
+            this.classList.remove('animate');
+            // Force reflow
+            void this.offsetWidth;
+            this.classList.add('animate');
+            
+            // Remove class after animation completes
+            setTimeout(() => {
+                this.classList.remove('animate');
+            }, 4000);
+        });
+    }
+  }
