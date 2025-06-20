@@ -88,5 +88,20 @@ function triggerReveal(type) {
         revealBox.className = 'reveal-box';
     }, 1500);
 }
+// Toggle continuous animation
+function toggleContinuous() {
+    if (!continuousShape || !continuousBtn) return;
+    
+    continuousAnimationRunning = !continuousAnimationRunning;
+    
+    if (continuousAnimationRunning) {
+        continuousShape.classList.remove('paused');
+        continuousBtn.textContent = 'Pause';
+    } else {
+        continuousShape.classList.add('paused');
+        continuousBtn.textContent = 'Play';
+    }
+}
+
 
   }
