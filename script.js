@@ -284,5 +284,20 @@ function optimizeAnimations() {
         }
     });
 }
+// Initialize advanced features
+setTimeout(() => {
+    addAdvancedInteractions();
+    optimizeAnimations();
+}, 1000);
 
-  }
+// Export functions for global access
+window.triggerReveal = triggerReveal;
+window.toggleContinuous = toggleContinuous;
+window.triggerLoading = triggerLoading;
+window.triggerTextReveal = triggerTextReveal;
+
+// Console message for developers
+console.log('🎨 Advanced Clip-Path Animations Loaded!');
+console.log('💡 Use keyboard controls: Space, Enter, Arrow keys');
+console.log('✨ Built with vanilla HTML, CSS, and JavaScript');
+  
