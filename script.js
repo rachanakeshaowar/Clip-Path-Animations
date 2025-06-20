@@ -31,4 +31,30 @@ function initializeAnimations() {
             }, 4000);
         });
     }
+    // Add floating animation to all cards on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'float 3s ease-in-out infinite';
+            }
+        });
+    }, observerOptions);
+
+    // Observe all animation cards
+    document.querySelectorAll('.animation-card').forEach(card => {
+        observer.observe(card);
+    });
+
+    // Add hover effects to shapes
+    addHoverEffects();
+    
+    // Add particle effects
+    createParticleBackground();
+}
+
   }
