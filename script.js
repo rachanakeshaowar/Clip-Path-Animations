@@ -191,5 +191,14 @@ function createParticle(container) {
     `;
     
     container.appendChild(particle);
-    
+    // Remove particle after animation
+    setTimeout(() => {
+        if (particle.parentNode) {
+            particle.parentNode.removeChild(particle);
+            // Create a new particle to maintain count
+            setTimeout(() => createParticle(container), Math.random() * 2000);
+        }
+    }, duration * 1000);
+}
+
   }
