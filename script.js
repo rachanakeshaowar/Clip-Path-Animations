@@ -135,5 +135,20 @@ function triggerTextReveal() {
         textReveal.classList.remove('animate');
     }, 2000);
 }
-
+// Add enhanced hover effects
+function addHoverEffects() {
+    const hoverShapes = document.querySelectorAll('.hover-shape');
+    
+    hoverShapes.forEach(shape => {
+        shape.addEventListener('mouseenter', function() {
+            this.style.filter = 'brightness(1.2) saturate(1.3)';
+            this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.3)';
+        });
+        
+        shape.addEventListener('mouseleave', function() {
+            this.style.filter = 'brightness(1) saturate(1)';
+            this.style.boxShadow = 'none';
+        });
+    });
+}
   }
