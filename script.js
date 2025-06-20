@@ -261,5 +261,28 @@ function addAdvancedInteractions() {
         }
     });
 }
+// Performance optimization
+function optimizeAnimations() {
+    // Reduce animations on slower devices
+    if (navigator.hardwareConcurrency < 4) {
+        document.documentElement.style.setProperty('--animation-duration', '2s');
+        document.documentElement.style.setProperty('--particle-count', '10');
+    }
+    
+    // Pause animations when tab is not visible
+    document.addEventListener('visibilitychange', function() {
+        const animatedElements = document.querySelectorAll('[class*="animate"]');
+        
+        if (document.hidden) {
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+            });
+        } else {
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'running';
+            });
+        }
+    });
+}
 
   }
