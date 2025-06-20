@@ -102,6 +102,26 @@ function toggleContinuous() {
         continuousBtn.textContent = 'Play';
     }
 }
-
+function triggerLoading() {
+    if (loadingBar) {
+        loadingBar.classList.remove('animate');
+        void loadingBar.offsetWidth;
+        loadingBar.classList.add('animate');
+        
+        setTimeout(() => {
+            loadingBar.classList.remove('animate');
+        }, 2000);
+    }
+    
+    if (loadingCircle) {
+        loadingCircle.classList.remove('animate');
+        void loadingCircle.offsetWidth;
+        loadingCircle.classList.add('animate');
+        
+        setTimeout(() => {
+            loadingCircle.classList.remove('animate');
+        }, 1500);
+    }
+}
 
   }
