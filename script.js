@@ -151,4 +151,25 @@ function addHoverEffects() {
         });
     });
 }
+// Create animated background particles
+function createParticleBackground() {
+    const particleContainer = document.createElement('div');
+    particleContainer.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        overflow: hidden;
+    `;
+    
+    document.body.appendChild(particleContainer);
+    
+    // Create floating particles
+    for (let i = 0; i < 20; i++) {
+        createParticle(particleContainer);
+    }
+}
   }
