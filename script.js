@@ -123,5 +123,17 @@ function triggerLoading() {
         }, 1500);
     }
 }
+// Trigger text reveal animation
+function triggerTextReveal() {
+    if (!textReveal) return;
+    
+    textReveal.classList.remove('animate');
+    void textReveal.offsetWidth;
+    textReveal.classList.add('animate');
+    
+    setTimeout(() => {
+        textReveal.classList.remove('animate');
+    }, 2000);
+}
 
   }
