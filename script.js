@@ -219,4 +219,47 @@ const floatUpKeyframes = `
         }
     }
 `;
+// Inject keyframes into page
+const styleSheet = document.createElement('style');
+styleSheet.textContent = floatUpKeyframes;
+document.head.appendChild(styleSheet);
+
+// Advanced interactive features
+function addAdvancedInteractions() {
+    // Mouse tracking for morphing shapes
+    document.addEventListener('mousemove', function(e) {
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
+        
+        // Update CSS custom properties for mouse-dependent animations
+        document.documentElement.style.setProperty('--mouse-x', mouseX);
+        document.documentElement.style.setProperty('--mouse-y', mouseY);
+    });
+    
+    // Keyboard controls
+    document.addEventListener('keydown', function(e) {
+        switch(e.key) {
+            case ' ': // Spacebar
+                e.preventDefault();
+                triggerTextReveal();
+                break;
+            case 'Enter':
+                triggerLoading();
+                break;
+            case 'ArrowLeft':
+                triggerReveal('left');
+                break;
+            case 'ArrowRight':
+                triggerReveal('right');
+                break;
+            case 'ArrowUp':
+                triggerReveal('circle');
+                break;
+            case 'ArrowDown':
+                triggerReveal('diamond');
+                break;
+        }
+    });
+}
+
   }
