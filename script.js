@@ -200,5 +200,23 @@ function createParticle(container) {
         }
     }, duration * 1000);
 }
-
+// Add floating particle animation
+const floatUpKeyframes = `
+    @keyframes floatUp {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+`;
   }
