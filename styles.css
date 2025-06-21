@@ -97,3 +97,69 @@ body {
     text-align: center;
     margin-bottom: 25px;
 }
+.card-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.card-header p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.morphing-shape {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.morphing-shape.animate {
+    animation: morphingAnimation 4s ease-in-out;
+}
+
+.shape-content {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+.reveal-container {
+    text-align: center;
+}
+
+.reveal-box {
+    width: 200px;
+    height: 120px;
+    margin: 0 auto 20px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.reveal-content {
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
