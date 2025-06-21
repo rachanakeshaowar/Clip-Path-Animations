@@ -11,3 +11,30 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 4s ease-in-out infinite;
+    margin-bottom: 15px;
+}
