@@ -181,7 +181,7 @@ button:hover {
     transform: translateY(-2px);
 }
 
-/* Hover Effects Grid */
+
 .hover-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -201,3 +201,5 @@ button:hover {
     cursor: pointer;
     transition: all 0.4s ease;
 }
+
+
